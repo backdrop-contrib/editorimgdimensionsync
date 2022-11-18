@@ -1,0 +1,14 @@
+<?php
+/**
+ * @file
+ * Editor Image Dimension Sync module code.
+ */
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function editorimgdimensionsync_form_filter_format_editor_image_form_alter(&$form, &$form_state, $form_id) {
+  $path = backdrop_get_path('module', 'editorimgdimensionsync');
+  $form['#attached']['css'][] = $path . '/css/editorimgdimensionsync.css';
+  $form['#attached']['js'][] = $path . '/js/editorimgdimensionsync.js';
+}

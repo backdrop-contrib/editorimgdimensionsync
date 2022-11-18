@@ -1,0 +1,21 @@
+.filter-format-editor-image-form .reset-orig {
+  border: none;
+  text-indent: -500px;
+  width: 1.2em;
+  height: 1.2em;
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 .4em;
+  padding: 0;
+  opacity: 1;
+  cursor: pointer;
+  background-color: currentColor;
+  -webkit-mask-image: url("../img/reset-arrows.svg");
+  mask-image: url("../img/reset-arrows.svg");
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+.filter-format-editor-image-form .reset-orig:disabled {
+  opacity: 0.7;
+  cursor: initial;
+}
