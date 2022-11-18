@@ -121,6 +121,7 @@
       $('.filter-format-editor-image-form [name="attributes[width]"]').off('change').on('change', function() {
         var newHeight = Math.round(this.value / naturalDimensions.width * naturalDimensions.height);
         $('.filter-format-editor-image-form [name="attributes[height]"]').val(newHeight);
+        Backdrop.behaviors.editorImageLibrary.setButtonState(naturalDimensions);
       });
       $('.filter-format-editor-image-form [name="attributes[height]"]').off('change').on('change', function() {
         var newWidth = Math.round(this.value / naturalDimensions.height * naturalDimensions.width);
