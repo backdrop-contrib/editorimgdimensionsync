@@ -22,13 +22,6 @@ there.
 Bugs and Feature requests should be reported in the 
  [Issue Queue](https://github.com/backdrop-contrib/editorimgdimensionsync/issues)
 
-## Known Issues
-
-Switching between "Upload an image" and "Select from library" may cause the
-reset button to lose track of dimensions. In that case close the dialog and
-open it again. (Switching isn't recommended, anyway, as it causes other
-unexpected behavior in the dialog.)
-
 ## Current Maintainers
 
 - [Indigoxela](https://github.com/indigoxela)
