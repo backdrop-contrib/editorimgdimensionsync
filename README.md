@@ -7,6 +7,8 @@ It synchronizes the image dimensions while editing, to preserve the image ratio.
 Additionally provides a button to reset to the original image dimensions when
  they have been changed.
 
+![Dialog screenshot](https://raw.githubusercontent.com/backdrop-contrib/editorimgdimensionsync/1.x-1.x/screenshots/dialog-screenshot.webp)
+
 ## Installation
 
 - Install this module using the official 
