@@ -9,6 +9,9 @@ Additionally provides a button to reset to the original image dimensions when
 
 ![Dialog screenshot](https://raw.githubusercontent.com/backdrop-contrib/editorimgdimensionsync/1.x-1.x/screenshots/dialog-screenshot.webp)
 
+There are no settings, just enable the module and the functionality will be
+there.
+
 ## Installation
 
 - Install this module using the official 
