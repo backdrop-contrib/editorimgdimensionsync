@@ -3,4 +3,4 @@ description = Synchronize the image dimensions (width and height) in CKEditor's 
 backdrop = 1.x
 type = module
 
-dependencies[] = ckeditor
+dependencies[] = filter
