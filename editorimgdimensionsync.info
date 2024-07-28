@@ -2,5 +2,6 @@ name = Editor Image Dimension Sync
 description = Synchronize the image dimensions (width and height) in CKEditor's image selection dialog while editing.
 backdrop = 1.x
 type = module
+maintainers[indigoxela] = indigoxela
 
 dependencies[] = filter
