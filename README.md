@@ -1,6 +1,6 @@
 # Editor Image Dimension Sync
 
-This small module enhances the CKEditor image selection dialog.
+This small module enhances the Filter module's image selection AJAX dialog.
 
 It synchronizes the image dimensions while editing, to preserve the image ratio.
 
