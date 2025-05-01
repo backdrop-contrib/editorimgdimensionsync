@@ -33,12 +33,17 @@
         });
 
       // Lock image aspect ratio and keep in sync. Custom adaptions start here.
-      var naturalDimensions = {
+      let $sizeFormItems = $('.filter-format-editor-image-form .editor-image-size');
+      // But first make sure, the form items exist.
+      if (!$sizeFormItems.length) {
+        return;
+      }
+      let naturalDimensions = {
         width: null,
         height: null
       };
-      $('.filter-format-editor-image-form .editor-image-size').once('append-button', function() {
-        var label = Backdrop.t('Reset to original');
+      $sizeFormItems.once('append-button', function() {
+        let label = Backdrop.t('Reset to original');
         $(this).append('<button type="button" class="reset-orig" disabled title="' + label + '" data-dimensions="">' + label + '</button>');
       });
       $('.filter-format-editor-image-form .editor-image-size button.reset-orig').on('click', function() {
@@ -46,7 +51,7 @@
         Backdrop.behaviors.editorImageLibrary.setButtonState($(this).data('data-dimensions'));
       });
       // When editing a previously added image or upload a new one.
-      var existingFile = $('.filter-format-editor-image-form .form-managed-file a').attr('href');
+      let existingFile = $('.filter-format-editor-image-form .form-managed-file a').attr('href');
       if (typeof existingFile !== 'undefined') {
         let img = new Image();
         img.onload = function() {
@@ -119,12 +124,12 @@
      */
     syncAspectRatio: function(naturalDimensions) {
       $('.filter-format-editor-image-form [name="attributes[width]"]').off('change').on('change', function() {
-        var newHeight = Math.round(this.value / naturalDimensions.width * naturalDimensions.height);
+        let newHeight = Math.round(this.value / naturalDimensions.width * naturalDimensions.height);
         $('.filter-format-editor-image-form [name="attributes[height]"]').val(newHeight);
         Backdrop.behaviors.editorImageLibrary.setButtonState(naturalDimensions);
       });
       $('.filter-format-editor-image-form [name="attributes[height]"]').off('change').on('change', function() {
-        var newWidth = Math.round(this.value / naturalDimensions.height * naturalDimensions.width);
+        let newWidth = Math.round(this.value / naturalDimensions.height * naturalDimensions.width);
         $('.filter-format-editor-image-form [name="attributes[width]"]').val(newWidth);
         Backdrop.behaviors.editorImageLibrary.setButtonState(naturalDimensions);
       });
@@ -139,8 +144,8 @@
      * Update the disabled state of the button.
      */
     setButtonState: function(naturalDimensions) {
-      var $button = $('.filter-format-editor-image-form .editor-image-size button.reset-orig');
-      var curWidth = $('.filter-format-editor-image-form [name="attributes[width]"]').val();
+      let $button = $('.filter-format-editor-image-form .editor-image-size button.reset-orig');
+      let curWidth = $('.filter-format-editor-image-form [name="attributes[width]"]').val();
       if (curWidth.length && $button.data('data-dimensions').width != curWidth) {
         $button.removeAttr('disabled');
       }
