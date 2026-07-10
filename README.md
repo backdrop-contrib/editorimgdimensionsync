@@ -1,6 +1,7 @@
 # Editor Image Dimension Sync
 
-This small module enhances the Filter module's image selection AJAX dialog.
+This module enforces an image's aspect ratio in the CKEditor and TinyMCE image
+dialog, when the user manually changes the width or height values.
 
 It synchronizes the image dimensions while editing, to preserve the image ratio.
 
