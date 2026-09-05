@@ -1,5 +1,8 @@
 # Editor Image Dimension Sync
 
+‼️ Obsolete as of Backdrop CMS 1.35.0. This functionality got merged into
+core.
+
 This module enforces an image's aspect ratio in the CKEditor and TinyMCE image
 dialog, when the user manually changes the width or height values.
 
